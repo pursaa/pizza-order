@@ -34,8 +34,9 @@ body {
 }
 button {
   background-color: lightgreen;
-  color: rgba(203, 121, 159, 1);
+  color: #c11111;
   font-size: 30px;
+  border: 7px outset pink;
 
 }
 #size {
