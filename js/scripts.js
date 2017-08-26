@@ -49,14 +49,5 @@ $(document).ready(function(){
     var pizzaPrice = new Option((size), (topping));
     var total = pizzaPrice.price();
     $("#output").append(total);
-
-    // $("ul#prices").append("<li><span class='price'>" + pizzaPrice.sizes + "</span></li>");
-
-        // $("input#new-first-name").val("");
-        // $("input#new-last-name").val("");
-
-
-    //
-    // $("#output").append(total);
   });
 });
