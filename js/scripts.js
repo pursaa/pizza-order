@@ -1,50 +1,41 @@
-//Business logic
+// Business logic
 function Option(size, topping) {
-  this.size = size;
-  this.topping = topping;
+  this.sizes = size;
+  this.toppings = topping;
 }
-
 Option.prototype.price = function(){
-  var total = this.size + this.topping;
+   var total = this.sizes + this.toppings;
 
-  if (total = 6){
-    $("#output").text("You total is $6.00");
-  // }else if(this.age <= 15 && this.time === 1 && this.movie < 4){
-  //   $("#output").text(" $4.00");
-  // }else if(this.age <= 15 && this.time === 2 && this.movie < 4){
-  //   $("#output").text(" $5.00   ");
-  // }else if(this.age > 64 && this.time <= 2 && this.movie <= 4){
-  //   $("#output").text(" $4.50   ");
-  // }else if(this.age > 15 && this.age <65 && this.time === 1 && this.movie <= 4){
-  //   $("#output").text(" $6.00   ");
-  }else{
-    $("#output").text(" $7.00   ");
-  }
-  return total;
-  console.log("You made it")
-}
-
-
+     if((this.sizes === "Small") && (this.toppings === "Olives")){
+       console.log("$6.00");
+     }
+     else{
+       console.log('No Price available');
+     }
+     return total;
+   }
 
 //User interface logic
 $(document).ready(function(){
-  $("#pizza").submit(function(event){
+  $("form#pizza").submit(function(event){
     event.preventDefault();
-    var size = parseInt($("#size").val());
-    var topping = parseInt($("#topping").val());
 
-    console.log(size, topping)
+    var size = $("#size").val();
+    var topping = $("#topping").val();
 
-    // var myPrice = new Option(size), (topping);
+    console.log(size, topping);
+
+    var pizzaPrice = new Option((size), (topping));
+    var total = pizzaPrice.price();
+    $("#output").append(total);
+
+    // $("ul#prices").append("<li><span class='price'>" + pizzaPrice.sizes + "</span></li>");
+
+        // $("input#new-first-name").val("");
+        // $("input#new-last-name").val("");
+
+
     //
-    // console.log(myPrice);
-    var myPrice = new Option(size, topping);
-
-
-    // var totalPrice = myPrice.price();
-
-            // $("#output").append(totalPrice);
-            // console.log(totalPrice);
-
+    // $("#output").append(total);
   });
 });
