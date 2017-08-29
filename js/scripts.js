@@ -8,6 +8,8 @@ Option.prototype.price = function(){
 
    if((this.sizes === "Small") && (this.toppings === "Olives")){
      return "$6.00";
+     console.log (price)
+
    }else if((this.sizes === "Small") && (this.toppings === "Mushrooms")){
      return "$6.50";
    }else if((this.sizes === "Small") && (this.toppings === "Onions")){
