@@ -1,6 +1,6 @@
-#_Pizza Order_
+# Pizza Order
 
-#### _This app will take your pizza order, August 28, 2017_
+#### _This app will take your pizza order August 28, 2017_
 
 #### By _**Debbie Michel**_
 
