@@ -2,14 +2,13 @@
 function Option(size, topping) {
   this.sizes = size;
   this.toppings = topping;
+
+
 }
 Option.prototype.price = function(){
   var total = this.sizes + this.toppings;
-
    if((this.sizes === "Small") && (this.toppings === "Olives")){
      return "$6.00";
-     console.log (price)
-
    }else if((this.sizes === "Small") && (this.toppings === "Mushrooms")){
      return "$6.50";
    }else if((this.sizes === "Small") && (this.toppings === "Onions")){
@@ -33,8 +32,9 @@ Option.prototype.price = function(){
    }else if((this.sizes === "Family") && (this.toppings === "Onions")){
      return "$12.75";
    }else{
-     return'$0.00.  You will need to choose a pizza size and a topping option';
+     return'No Price available';
    }
+ // return total;
 }
 
 //User interface logic
